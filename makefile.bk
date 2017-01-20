@@ -55,7 +55,7 @@ ub_install_ctags :
 	sudo apt-get install exuberant-ctags
 
 
-DOT_FILES = .zshenv .zprofile .zshrc .vimrc .vim
+DOT_FILES = .zshenv .zprofile .zshrc .vimrc .vim .vim.login
 
 VIM_FILES = bundle testbundle autoload UltiSnips colors ftdetect ftplugin 
 

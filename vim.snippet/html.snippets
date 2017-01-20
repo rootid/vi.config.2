@@ -1,0 +1,48 @@
+
+snippet label_and_input
+<label for="${2:$1}">${1}</label>
+<input type="${3:text}" name="${4:$2}"${5: id="${6:$2}"} value="${7}" />${8}
+endsnippet
+
+snippet input
+<input type="${1:text}" value="${2}" name="${3}"${4: id="${5:$3}"}/>${7}
+endsnippet
+
+snippet submit
+<input type="submit" value="${2}" ${3}/>${7}
+endsnippet
+
+snippet textarea
+<textarea name="$2"${3: id="$4"}>$5</textarea>
+endsnippet
+
+snippet img
+<img src="$1"${2: alt="$3"}/>
+endsnippet
+
+snippet script
+<script type="text/javascript" src="$0"> </script>
+endsnippet
+
+snippet link
+<link rel="stylesheet" type="text/css" href="$0"/> 
+endsnippet
+
+
+snippet html
+<!DOCTYPE html>
+<html>
+<title>$1</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="$0" ng-controller="$1">
+ 	<p>Name: <input type="text" ng-model="name"></p>
+ 	<p ng-bind="name"></p>
+</div>
+
+</body>
+</html>
+endsnippet 
+
+

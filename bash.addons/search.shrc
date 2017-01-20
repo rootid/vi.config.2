@@ -1,0 +1,76 @@
+search_cpp() {
+	find . -follow -name '*.h' -or -name '*.cpp' | xargs grep -n "$1"
+}
+
+searchi_cpp() {
+	find . -follow -name '*.h' -or -name '*.cpp' | xargs grep -in "$1"
+}
+
+search_groovy() {
+	find . -follow -name '*.groovy' | xargs grep -n "$1"
+}
+
+searchi_groovy() {
+	find . -follow -name '*.groovy' | xargs grep -in "$1"
+}
+
+search_java() {
+	find . -follow -name '*.java' | xargs grep -n "$1"
+}
+
+searchi_java() {
+	find . -follow -name '*.java' | xargs grep -in "$1"
+}
+
+search_xml() {
+	find . -follow -name '*.xml' | xargs grep -n "$1"
+}
+
+searchi_xml() {
+	find . -follow -name '*.xml' | xargs grep -in "$1"
+}
+
+search_pxml() {
+	find . -follow -name 'pom.xml' | xargs grep -n "$1"
+}
+
+searchi_pxml() {
+	find . -follow -name 'pom.xml' | xargs grep -in "$1"
+}
+
+search_html() {
+	find . -follow -name '*.html' | xargs grep -n "$1"
+}
+
+searchi_html() {
+	find . -follow -name '*.html' | xargs grep -in "$1"
+}
+
+search_js() {
+	find . -follow -name '*.js' | xargs grep -n "$1"
+}
+
+searchi_js() {
+	find . -follow -name '*.js' | xargs grep -in "$1"
+}
+
+alias sg=search_groovy
+alias sig=searchi_groovy
+
+alias sc=search_cpp
+alias sic=searchi_cpp
+
+alias sj=search_java
+alias sij=searchi_java
+
+alias sx=search_xml
+alias six=searchi_xml
+
+alias sp=search_pxml
+alias sip=searchi_pxml
+
+alias sjs=search_js
+alias sijs=searchi_js
+
+alias shl=search_html
+alias sihl=searchi_html

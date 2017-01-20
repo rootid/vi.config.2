@@ -1,0 +1,17 @@
+
+export JAVA_HOME=/usr/java/latest
+export JRE_HOME=/usr/java/latest/jre
+if ! echo ${PATH} | grep -q ${JAVA_HOME} ; then
+   export PATH="${JAVA_HOME}/bin:${PATH}"
+fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/vikram/.sdkman"
+[[ -s "/home/vikram/.sdkman/bin/sdkman-init.sh" ]] && source "/home/vikram/.sdkman/bin/sdkman-init.sh"
+
+export GRAILS_HOME=/home/vikram/.sdkman/candidates/grails/current
+export PATH=$PATH:$GRAILS_HOME/bin 
+
+## mvn settings
+source_dir=/media/mnt/mvn_ln
+source ${source_dir}/mvn.sh

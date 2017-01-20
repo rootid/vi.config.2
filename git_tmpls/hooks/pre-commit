@@ -1,1 +1,3 @@
 #!/bin/sh
+
+echo "RUNNIGN B4 commit"

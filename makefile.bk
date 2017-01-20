@@ -54,9 +54,6 @@ bash_ln_update :
 ub_install_ctags :
 	sudo apt-get install exuberant-ctags
 
-get_home:
-	@echo $(HOME_DIR)
-	@echo $(CWD)
 
 DOT_FILES = .zshenv .zprofile .zshrc .vimrc .vim
 

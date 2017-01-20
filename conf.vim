@@ -1,66 +1,65 @@
 "https://github.com/dougblack/dotfiles/blob/master/.vimrc
-"
+
+"set rtp^=~/.vim/autoload/pathogen.vim
 if has('vim_starting')
-  if exists('$SRC')
-    set runtimepath^=$SRC/vim runtimepath+=$SRC/vim/after
-  elseif isdirectory(expand('~/Code'))
-    set runtimepath^=~/Code/vim runtimepath+=~/Code/vim/after
-  elseif isdirectory(expand('~/src'))
-    set runtimepath^=~/src/vim runtimepath+=~/src/vim/after
-  endif
-  "runtime! bundle/vim-pathogen/autoload/pathogen.vim
-  execute pathogen#infect("bundle/{}")
-  execute pathogen#infect("testbundle/{}")
+  "if exists('$SRC')
+  "  set runtimepath^=$SRC/vim runtimepath+=$SRC/vim/after
+  "elseif isdirectory(expand('~/Code'))
+  "  set runtimepath^=~/Code/vim runtimepath+=~/Code/vim/after
+  "elseif isdirectory(expand('~/src'))
+  "  set runtimepath^=~/src/vim runtimepath+=~/src/vim/after
+  "endif
+   "runtime! bundle/vim-pathogen/autoload/pathogen.vim
+   execute pathogen#infect("bundles/{}")
+   execute pathogen#infect("testbundles/{}")
 endif
 
 ""TODO : need to fix above code
 
 " Section: Defaults  {{{
 " ---------------------
-:so ${HOME}/.vim/vim.addons/default.vim
-:so ${HOME}/.vim/vim.addons/my.custom.vim
-:so ${HOME}/.vim/vim.addons/ctrpl.conf.vim
+:so ${HOME}/.vim/addons/default.vim
+:so ${HOME}/.vim/addons/my.custom.vim
+:so ${HOME}/.vim/addons/ctrpl.conf.vim
 
 :set efm="%f:%l: %m,%f:%l %m,%f:%l:      %m"
 
-:so ${HOME}/.vim/vim.addons/load.pathogen.vim
-":so ${HOME}/.vim/vim.addons/neocomplete.conf.vim
-:so ${HOME}/.vim/vim.addons/ctrpl.conf.vim
-":so ${HOME}/.vim/vim.addons/filetype.conf.vim
-:so ${HOME}/.vim/vim.addons/indexed.search.vim
-":so ${HOME}/.vim/vim.addons/tern.conf.vim
-:so ${HOME}/.vim/vim.addons/fold.vim
+":so ${HOME}/.vim/addons/neocomplete.conf.vim
+:so ${HOME}/.vim/addons/ctrpl.conf.vim
+":so ${HOME}/.vim/addons/filetype.conf.vim
+:so ${HOME}/.vim/addons/indexed.search.vim
+":so ${HOME}/.vim/addons/tern.conf.vim
+:so ${HOME}/.vim/addons/fold.vim
 
 "" set alignment
-:so ${HOME}/.vim/vim.addons/tabularize.conf.vim
+:so ${HOME}/.vim/addons/tabularize.conf.vim
 
 "code-navigation
-":so ${HOME}/.vim/vim.addons/omnicomplete.conf.vim
-":so ${HOME}/.vim/vim.addons/cscope.conf.vim
-":so ${HOME}/.vim/vim.addons/ctags.conf.vim
-":so ${HOME}/.vim/vim.addons/tlist.conf.vim
-":so ${HOME}/.vim/vim.addons/spell.check.vim
-":so ${HOME}/.vim/vim.addons/hard.reset.vim
-
+":so ${HOME}/.vim/addons/omnicomplete.conf.vim
+":so ${HOME}/.vim/addons/cscope.conf.vim
+":so ${HOME}/.vim/addons/ctags.conf.vim
+":so ${HOME}/.vim/addons/tlist.conf.vim
+":so ${HOME}/.vim/addons/spell.check.vim
+":so ${HOME}/.vim/addons/hard.reset.vim
 "ln -sf ${PWD}/vim_config  ${HOME}/.vimrc
-":so ${HOME}/.vim/vim.addons/dev.null.vim
-":so ${HOME}/.vim/vim.addons/solarized.color.vim
-":so ${HOME}/.vim/vim.addons/nerdtree.conf.vim
-":so ${HOME}/.vim/vim.addons/filetype.conf.vim
+":so ${HOME}/.vim/addons/dev.null.vim
+":so ${HOME}/.vim/addons/solarized.color.vim
+":so ${HOME}/.vim/addons/nerdtree.conf.vim
+":so ${HOME}/.vim/addons/filetype.conf.vim
 "}}}
 
 " Section: Custom Functions {{{1
 " ---------------------
-function! ToggleNumber()
-    if(&relativenumber == 1)
-        set number
-        set norelativenumber
-    else
-        set relativenumber
-    endif
-endfunc
+"function! ToggleNumber()
+"    if(&relativenumber == 1)
+"        set number
+"        set norelativenumber
+"    else
+"        set relativenumber
+"    endif
+"endfunc
 
-nnoremap <C-n> :call ToggleNumber()<cr>
+"nnoremap <C-n> :call ToggleNumber()<cr>
 "nnoremap <C-l> :call s:toggle_list()<cr>
 "}}}
 "
@@ -145,10 +144,19 @@ augroup END
 "
 
 " highlight last inserted text
-nnoremap gV `[v`]
-set lazyredraw          " redraw only when we need to.
-set showcmd             " show command in bottom bar
+"nnoremap gV `[v`]
+"set lazyredraw          " redraw only when we need to.
+"set showcmd             " show command in bottom bar
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 set laststatus=2
 set nolist
+
+filetype plugin indent on
+let g:UltiSnipsSnippetDirectories=["~/.vim/ultisnips"]  
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsNoPythonWarning = 1

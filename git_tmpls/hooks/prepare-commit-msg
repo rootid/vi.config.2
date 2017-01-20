@@ -7,7 +7,7 @@ then
     echo "Please install perl"
 fi
 
-story_no="US712324"
+story_no="master"
 #story_no="fx-ut"
 #perl -i.bak -ne 's/^/[$ENV{'story_no'}] /; print' "$1" ;
 sed -i.bak -e "1s/^/[$story_no] /" $1

@@ -42,12 +42,6 @@ ssh_update :
 java_update :
 	ln -s /usr/java/jdk1.7.0_79 /usr/java/latest
 
-vim_boot :
-	mkdir -p $(CWD)/bundle 
-	mkdir -p $(CWD)/autoload 
-	curl https://github.com/tpope/vim-pathogen/raw/master/autoload/pathogen.vim > $(CWD)/pathogen.vim
-
-
 bash_ln_update :
 	mkdir -p $(HOME_DIR)/.vi.bash
 	ln -sf $(CWD)/bash.addons/default.shrc $(HOME_DIR)/.vi.bash/default.shrc

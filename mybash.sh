@@ -8,4 +8,5 @@ source ${VI_CONF}/bash.addons/git.shrc
 source ${VI_CONF}/bash.addons/search.shrc
 source ${VI_CONF}/bash.addons/ack.shrc
 
-## source this file 
+## source this file for alias 
+##

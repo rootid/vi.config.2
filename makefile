@@ -9,6 +9,9 @@ CWD = ${PWD}
 
 all: clean vim_link dot_link
 
+hello:
+	@echo "Running pre-commit"
+
 clean: $(VIM_FILES) $(DOT_FILES)
 
 vim_link : 

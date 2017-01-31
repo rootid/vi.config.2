@@ -1,4 +1,0 @@
-#!/bin/sh
-
-make hello
-echo "RUNNIGN B4 COMMIT MAKE UPER"

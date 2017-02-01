@@ -14,6 +14,8 @@ hello:
 
 clean: $(VIM_FILES) $(DOT_FILES)
 
+clean_dot: $(DOT_FILES)
+
 vim_link : 
 	@echo "Create Symlink "
 	for i in $(VIM_FILES)  ; \

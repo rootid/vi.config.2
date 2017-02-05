@@ -42,3 +42,5 @@ $(VIM_FILES) :
 $(DOT_FILES) : 
 	@echo "Remove Symlink $(HOME)/.$@"
 	@$(RM) $(HOME)/.$@ 2>/dev/null
+
+# vim: noexpandtab

@@ -1,11 +1,13 @@
 if exists("loaded_related") 
-	finish
+finish
 endif
 let loaded_related = 1
 
 
 
 " Refer ':help using-<Plug>'
+"SID : unique identifier for each custom script
+"s: make local to script
 if !hasmapto('<Plug>Related')
 map <unique> <leader>r <Plug>Related
 endif

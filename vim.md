@@ -58,9 +58,16 @@
         diffput b#
 
 #### Folding
-    * Marker
+    * Fold methods (marker,syntax,indent,manual)
 
 #### Scripts and Plugins
+    * Plugin types
+        All Plugins (.vimrc)
+        Global ($HOME/.vim/plugin/)
+        Filetype (~/.vim/ftplugin/)
+        eg.  autocmd BufNewFile,BufRead *.xml source ~/.vim/ftplugin/xml.vim
+        Syntax ($VIMRUNTIME/syntax/docbkxml.vim)
+        Compiler (~/.vim/compiler/)
     * Variables
         :help internal-variables
         :echo $VIMRUNTIME "access env var
@@ -70,6 +77,8 @@
     * Debug
 
 #### Compilers + Quickfix list
+    * Compilers  (make)
+    * Quickfix (navigate between the list)
 
 #### Vim other usages
     * Read man pages using VIM 

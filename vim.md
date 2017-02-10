@@ -17,6 +17,9 @@
         CR - Enter
 
     * ModelLines
+        * JAVA
+        // vim: fdm=marker foldmarker={,}  
+        
 
 #### Navigation
     * File Buffers (memory)

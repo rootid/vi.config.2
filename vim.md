@@ -34,6 +34,13 @@
       Visual Mode
 
     * Recorded edits
+        Useful for custom operrations
+        eg. Append all the modelines on existing files in VIM buffer
+            Open all required files inside vim + :set autowriteall
+            Start recording (:n qa)  
+            Apply operation (,am)
+            Exit recording (q)
+            Repeat recording for all buffers (:bufdo normal! @a)
 
     * Mark edits
         eg. Replace/delete occurance of "Hello" with "Bye" within some range

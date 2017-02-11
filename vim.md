@@ -35,6 +35,13 @@
 
     * Recorded edits
 
+    * Mark edits
+        eg. Replace/delete occurance of "Hello" with "Bye" within some range
+            Go to start range => ma
+            Go to end range => mb
+            Replace =>  :'a,'bs/Hello/Bye/
+            Delete lines between range => :'a,'bg/Bye/d
+
 #### Regex Edits
 
     * Regex /pattern/<operation>
@@ -94,7 +101,6 @@
            w
 
 #### Vim variables
-    extract values from options, by prefixing the option name (filetype in our case) 
     with an ampersand (&) character. H
     ence we will use the variable &filetype in our function.
     We start with a simple version of our CheckFileType function:
@@ -104,7 +110,6 @@
       filetype detect 
     endif
     endfunction
-    
     The Vim command filetype detect is a Vim script installed in the $VIMRUNTIME directory
 
 <!-- 

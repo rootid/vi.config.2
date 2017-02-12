@@ -49,6 +49,14 @@
             Replace =>  :'a,'bs/Hello/Bye/
             Delete lines between range => :'a,'bg/Bye/d
 
+    * Register edits
+        Fact :   yw and dw updates same reg ""  
+               + yw update reg 0
+        Fact : use blackhole reg to delete word n:"_dw
+        eg. Copy the word and replace the target word with copied word , do this multiple times
+         1. n:yw
+         2. :map <leader>p cw<C-r>0<ESC>
+
 #### Regex Edits
 
     * Regex /pattern/<operation>

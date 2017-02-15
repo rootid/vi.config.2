@@ -1,4 +1,14 @@
 #!/bin/sh
 
-make hello
-echo "RUNNIGN B4 COMMIT MAKE UPER"
+#make hello
+
+email=vissac@X.gmail.com
+userid=vissac
+git config --list --local | grep email 2>/dev/null
+
+if [ ${?} -ne 0 ]
+then
+	echo "Setting local GIT variable"
+	git config --local user.email ${email}
+	git config --local user.name ${userid}
+fi
